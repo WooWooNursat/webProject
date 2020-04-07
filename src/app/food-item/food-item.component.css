@@ -1,0 +1,19 @@
+.row {
+    display: flex;
+  }
+  .column {
+    flex: 60%;
+    padding: 10px;
+  }
+  
+  
+  img {
+    padding: 50px 60px;
+    margin: 50px 60px;
+  }
+  .b
+  {
+      width: 70px;
+      height: 70px;
+  }
+  

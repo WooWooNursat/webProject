@@ -1,0 +1,23 @@
+<h2 style="text-align:center; margin: 40px 0px;">Products</h2>
+<div class="products">
+  <div class="product-item maxScale"  *ngFor="let food of foods">
+
+      <h3>
+        <a routerLink="/category/{{food.category_id}}/food-id/{{food.id}}" [state]="{ food:food }" [title]="food.name + ' details'" >
+          {{ food.name }}
+        </a>
+      </h3>
+      <img class="zoom" src={{food.images}}>
+      <br>
+      <h4> {{ food.price }} $ <span style="color:deeppink(0, 162, 255);float:right;font-size: 10px;"> rating: {{ food.rating }} </span></h4>
+      <div style="display:flex;justify-content:space-between">
+        <button (click)="share(food)">
+          Share
+        </button>
+        <app-food-alerts
+          [food]="food"
+          (notify)="onNotify()">
+        </app-food-alerts>
+      </div>
+  </div>
+</div>

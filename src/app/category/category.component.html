@@ -1,0 +1,13 @@
+<h2 style="text-align: center">{{category.name}}</h2>
+<div class="mainDiv">
+  <div class="product-item" *ngFor="let food of foods">
+    <h3>
+      <a routerLink="/category/{{category.id}}/food-id/{{food.id}}" [state]="{ food:food }" [title]="food.name + ' details'" >
+      {{ food.name }}
+    </a>
+    </h3>
+    <img src="{{food.images}}" id="myimg"/>
+    <br>
+    <h4>{{ food.price }}   </h4>
+  </div>
+</div>

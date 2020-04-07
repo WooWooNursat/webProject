@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="column">
+        <h3>
+            {{ food.food.name }}
+        </h3>
+        <p>
+          {{ food.food.description }}
+        </p>
+        <img id="main" src={{food.food.images}}>
+        <h4> {{ food.food.price }} $ <span style="color:rgb(116, 48, 206);"> {{food.food.ingredients}}</span>  </h4>
+  
+         
+      </div>
+      
+    <div class="column">
+     
+    </div>
+  </div>
+  <div>
+    <label>Ingredients:
+      <input [(ngModel)]="food.food.ingredients" placeholder="ingredients"/>
+    </label>
+   
+  </div>
+  <button id ="b"(click)="goBack()">go back</button>
