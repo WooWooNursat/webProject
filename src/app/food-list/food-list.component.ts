@@ -6,7 +6,7 @@ import { foods} from '../foods';
   styleUrls: ['./food-list.component.css']
 })
 export class FoodListComponent implements OnInit {
-foods=foods;
+  foods=foods;
   constructor() { }
   share(food) {
     const url: string = window.location.href;
